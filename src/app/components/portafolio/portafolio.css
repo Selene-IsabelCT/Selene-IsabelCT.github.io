@@ -1,0 +1,192 @@
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #ffffff;
+}
+
+.seccion-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.banner-principal {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(224, 64, 251, 0.2); /* Sombra lila/rosa */
+    border: 1px solid rgba(224, 64, 251, 0.3);
+}
+
+.presentacion h1 {
+    color: #e040fb;
+    margin-top: 0;           /* Quita el margen superior extra para alinear mejor con el logo */
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.presentacion p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+}
+
+/* Sistema de Grid Responsivo para las tarjetas */
+.seccion-roles {
+    display: grid;
+    /* Esto hace que las tarjetas bajen a una sola columna en celulares automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta-rol {
+    height: 100%;
+    background-color: #1e1e24;
+    border-top: 4px solid #e040fb; /* Acento rosa/lila superior */
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-rol:hover {
+    transform: translateY(-5px);
+}
+
+/* Forzar colores claros dentro de las tarjetas de PrimeNG para el modo oscuro */
+::ng-deep .p-card .p-card-title {
+    color: #ffffff;
+}
+
+::ng-deep .p-card .p-card-subtitle {
+    color: #b39ddb; /* Lila suave */
+}
+
+::ng-deep .p-card .p-card-content {
+    color: #d1d1d1;
+    line-height: 1.5;
+}
+
+/* Responsividad para móviles pequeños */
+@media (max-width: 768px) {
+    .seccion-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentacion h1 {
+        font-size: 2rem;
+    }
+}
+
+.banner-principal {
+    width: 50%;
+    max-width: 100px; /* Cambia este número al tamaño que prefieras */
+    height: auto;     /* Mantiene la proporción para que no se estire */
+    align-self: flex-start; /* Mueve solo la imagen a la izquierda */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(224, 64, 251, 0.2);
+    border: 1px solid rgba(224, 64, 251, 0.3);
+}
+.seccion-hero {
+    display: flex;
+    flex-direction: row;     /* Coloca el logo y el texto uno al lado del otro */
+    align-items: center;     /* Los centra verticalmente entre sí */
+    justify-content: flex-start;
+    text-align: left;        /* Alinea el texto a la izquierda */
+    gap: 2rem;               /* Espacio entre el logo y las letras */
+    margin-bottom: 4rem;
+}
+.boton-centrado {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para el diálogo de contacto */
+.intro-contacto {
+    color: #cccccc;
+    font-size: 0.95rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.lista-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(224, 64, 251, 0.25);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.item-contacto:hover {
+    background-color: rgba(224, 64, 251, 0.12);
+    border-color: #e040fb;
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px rgba(224, 64, 251, 0.15);
+}
+
+.icono-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(224, 64, 251, 0.2), rgba(179, 157, 219, 0.2));
+    color: #e040fb;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.info-contacto .etiqueta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #b39ddb;
+    font-weight: 600;
+}
+
+.info-contacto .valor {
+    font-size: 0.95rem;
+    color: #46164f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flecha-contacto {
+    margin-left: auto;
+    color: #b39ddb;
+    font-size: 0.9rem;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.item-contacto:hover .flecha-contacto {
+    color: #e040fb;
+    transform: translate(2px, -2px);
+}
+
+.footer-contacto {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
