@@ -1,0 +1,102 @@
+<p-menubar [model]="items"></p-menubar>
+
+<main class="contenedor-principal">
+    <header class="seccion-hero">
+        <img src="assets/img/icono.jpg" alt="Portafolio Selene Cárdenas" class="banner-principal">
+        
+        <div class="presentacion">
+            <h1>Bienvenidos a mi espacio profesional</h1>
+            <p style="text-align: center;">Aportando valor integral en el ciclo de vida del software.</p>
+            <div class="boton-centrado">
+                <p-button 
+                    label="Descargar CV" 
+                    icon="pi pi-download" 
+                    styleClass="p-button-help p-button-rounded">
+                </p-button>
+            </div>
+        </div>
+    </header>
+
+    <section class="seccion-roles">
+        <p-card header="Sistemas e Informática" subheader="Desarrollo Full Stack" styleClass="tarjeta-rol">
+            <p>Diseño y construcción de soluciones tecnológicas escalables, limpias y eficientes usando arquitecturas modernas.</p>
+        </p-card>
+        
+        <p-card header="Gestión de Proyectos" subheader="Scrum Master" styleClass="tarjeta-rol">
+            <p>Liderazgo de equipos bajo metodologías ágiles, facilitando la comunicación y garantizando la entrega continua de valor.</p>
+        </p-card>
+        
+        <p-card header="Procesos y Calidad" subheader="QA / Tester / Analista" styleClass="tarjeta-rol">
+            <p>Definición de requisitos, análisis de viabilidad y ejecución de pruebas para asegurar la excelencia del producto final.</p>
+        </p-card>
+    </section>
+</main>
+
+<p-dialog 
+    header="¡Conecteme!" 
+    [(visible)]="mostrarDialogo" 
+    [modal]="true" 
+    [style]="{ width: '28rem' }"
+    [breakpoints]="{ '1199px': '75vw', '575px': '92vw' }">
+    
+    <p class="intro-contacto">
+        ¿Tienes un proyecto en mente o una oportunidad laboral? Escríbeme por cualquiera de estos medios:
+    </p>
+
+    <div class="lista-contacto">
+        <!-- Correo -->
+<!-- Correo (Gmail Web) -->
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=seleneisabel.cardenas@gmail.com&su=Contacto%20desde%20tu%20portafolio" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="item-contacto">
+    <div class="icono-contacto">
+        <i class="pi pi-envelope"></i>
+    </div>
+    <div class="info-contacto">
+        <span class="etiqueta">Correo electrónico</span>
+        <span class="valor">seleneisabel.cardenas&#64;gmail.com</span>
+    </div>
+    <i class="pi pi-arrow-up-right flecha-contacto"></i>
+</a>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/526674074727?text=Hola%20Selene,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte." 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="item-contacto">
+    <div class="icono-contacto">
+        <i class="pi pi-whatsapp"></i>
+    </div>
+    <div class="info-contacto">
+        <span class="etiqueta">WhatsApp</span>
+        <span class="valor">667 407 4727</span>
+    </div>
+    <i class="pi pi-arrow-up-right flecha-contacto"></i>
+</a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/selene-isabel-cardenas-torres-13225a347/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="item-contacto">
+            <div class="icono-contacto">
+                <i class="pi pi-linkedin"></i>
+            </div>
+            <div class="info-contacto">
+                <span class="etiqueta">LinkedIn</span>
+                <span class="valor">Selene Isabel Cárdenas</span>
+            </div>
+            <i class="pi pi-arrow-up-right flecha-contacto"></i>
+        </a>
+    </div>
+
+    <div class="footer-contacto">
+        <p-button 
+            label="Cerrar" 
+            icon="pi pi-times"
+            (onClick)="mostrarDialogo = false" 
+            styleClass="p-button-help p-button-rounded">
+        </p-button>
+    </div>
+</p-dialog>
